@@ -1,19 +1,25 @@
-package fact_;
-import java.util.Scanner;
+package Factorial_number;
+import java.util.*;
+
 public class factorial {
+
 	public static void main(String[] args) {
-		int i,fact=1;
-		Scanner sc=new Scanner (System.in);
-		System.out.println("Enter a Positive Number:");
-		int num=sc.nextInt();
-		for(i=1;i<=num;i++) {
-			fact=fact*i;
-		}
-			
+		int num,fact;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		num=sc.nextInt();
 		
-		System.out.println("factorial of "+num+" is:"+fact);
-	
-
+		System.out.println("factorial of "+num+" is:"+factorial(num));
 	}
-
+	static int factorial(int num) {
+		int factor;
+		if(num==1) {
+			return 1;
+		}else {
+		factor=num*factorial(num-1);
+		}
+		return(factor);
+	}
 }
+		
+		
